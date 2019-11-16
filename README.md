@@ -1,0 +1,1 @@
+# rpm-builder-workspace-template
