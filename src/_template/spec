@@ -1,0 +1,51 @@
+# defines
+# versions
+%define main_version    x.y.z
+%define release_version YYYYMMDD-hhmm
+# summary
+Name:     MY_NAME
+Summary:  MY_SUMMARY
+Version:  %{main_version}
+Release:  %{release_version}
+Vendor:   Life-Pain
+URL:      https://life-pain.net/
+License:  MIT
+# sources
+Source0:  MY_SOURCE_0
+# build params
+BuildRoot: %{_tmppath}/%{name}-%{main_version}-%{release_version}-root
+
+# description
+%description
+MY DESCRIPTION.
+
+# prep
+%prep
+%setup -q
+
+# build
+%build
+%configure
+%{__make} %{?_smp_mflags}
+
+# install
+%install
+%make_install %{?multilib_flag}
+
+# files
+%files
+
+# pre
+%pre
+
+# preun
+%preun
+
+# post
+%post
+
+# postun
+%postun
+
+# changelog
+%changelog
